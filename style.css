@@ -110,6 +110,9 @@ coastalbody{
 a {
   text-decoration: none;
 }
+a:hover{
+  background-color: lightgrey;
+}
 img{
   padding: 15px;
 }
