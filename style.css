@@ -3,7 +3,6 @@ css
 
 .topnav{
   display: flex;
-  background-color: black;
   font-size: 30%;
 }
 .topnav a {
@@ -19,11 +18,11 @@ css
   background-color: #E6E6E6;
   color: black;
 }
-.topnav a.active {
+/* .topnav a.active {
   background-color: #04AA6D;
   color: E6E6E6;
   margin: 20px 20px 20px;
-}
+} */
 
 body{
   display: flex;
@@ -44,22 +43,29 @@ inlandbody{
   align-items: center;
 
   color: #E6E6E6;
-  background-image:linear-gradient(#416841,#6E5D45);
+  background-image:linear-gradient(#6E5D45,#416841);
 
   font-family: sans-serif;
   text-align: center;
 }
-bothbody{
+.inlandtopnav{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  color: #E6E6E6;
-  background-image:linear-gradient(#414968,#416841);
-
-  font-family: sans-serif;
-  text-align: center;
+  font-size: 30%;
 }
+.inlandtopnav a {
+  background-color: #416841;
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 20px 20px 20px;
+  text-decoration: none;
+  font-size: 14px;
+}
+.inlandtopnav a:hover {
+  background-color: #E6E6E6;
+  color: black;
+}
+
 coastalbody{
   display: flex;
   flex-direction: column;
@@ -71,6 +77,52 @@ coastalbody{
   font-family: sans-serif;
   text-align: center;
 }
+.coastaltopnav{
+  display: flex;
+  font-size: 30%;
+}
+.coastaltopnav a {
+  background-color: #ADD8E6;
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 20px 20px 20px;
+  text-decoration: none;
+  font-size: 14px;
+}
+.coastaltopnav a:hover {
+  background-color: black;
+  color: #E6E6E6;
+}
+
+bothbody{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: #E6E6E6;
+  background-image:linear-gradient(#414968,#416841);
+
+  font-family: sans-serif;
+  text-align: center;
+}
+.bothtopnav{
+  display: flex;
+  font-size: 30%;
+}
+.bothtopnav a {
+  background-color: #416841;
+  float: left;
+  color: #E6E6E6;
+  text-align: center;
+  padding: 20px 20px 20px;
+  text-decoration: none;
+  font-size: 14px;
+}
+.bothtopnav a:hover {
+  background-color: black;
+  color: #E6E6E6;
+}
 
 .content{
   display: flex;
@@ -81,7 +133,7 @@ coastalbody{
   color: black;
   margin: 35px 35px 35px 35px;
   padding: 15px;
-  width: 70%;
+  width: 70%
 }
 .content h2{
   display: flex;
@@ -91,21 +143,32 @@ coastalbody{
 }
 .content h3{
   display:flex;
-
   color: #6E5D45;
 }
 
-/* .column {
-  float: left;
-  width: 10%;
-  padding: 5px 5px 5px 5px;
-
-} */
-.row{
+/* .row{
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 5px;
+  width: 100%;
+} */
+
+.row{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 15px;
+  width: 100%;
+  align-items: center;
+  /* margin: 10px; */
+  justify-items: center;
+}
+
+.row img{
+  /* height: 300px;
+  width: auto; */
+  width: 100%;
+  height: 20vw;
 }
 
 a {
@@ -116,4 +179,9 @@ a:hover{
 }
 img{
   padding: 15px;
+}
+
+iframe{
+  width: 100%;
+  height: 400px;
 }
